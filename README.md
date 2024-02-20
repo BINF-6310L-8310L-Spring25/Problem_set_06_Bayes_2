@@ -2,12 +2,15 @@
 
 This week we will explore Confidence the Monte Carlo. This is primarily covered in the second half of the lectures for this week (~slide 90)
 
-In the lecture we covered conducting a monte carlo for finding the theta associated with flipping a coin. 
+In the lecture we covered conducting a Monte Carlo for finding the theta associated with flipping a coin. This week we will build a Monte Carlo to sample various mean values from a normal distribution. 
 
+$nbsp;
 
 # Background
 
 Genetic variants that are under balancing selection often have a frequency in the population of ~ 50%. You are attempting to find the frequency of a SNP called RS12 in the United States Population. However, you only have 90 samples from various cities across the US. This data is stored in the file. 
+
+$nbsp;
 
 # Question Set A
 
@@ -27,7 +30,7 @@ Possible values for the true mean of the RS12 SNP frequency could be 44%, 46%, 4
 
 You hypothesize that the true mean frequency of RS12 is <= 50%. Your null hypothesis is that the mean RS12 frequency is > 50%. You are going to test this using the Bayes Box framework for hypothesis testing. You are testing if the mean of the distribution of frequencies is <= 50%. 
 
-We will only be estimating the mean. Therefore, you can assume the true standard deviation is 30.
+We will only be estimating the mean. Therefore, you can assume the **true standard deviation is 30**.
 
 You are going to use a non-informative prior. This means that your alternative and null hypotheses each have a total of 0.50 (or 50%) probability. 
 
@@ -70,7 +73,7 @@ What is the _total_ likelihood of an RS12 frequency of 50% across all the observ
 
 Now, you will compute the posterior probability for each proposed value of RS12 frequency. To do this, you will compute the total likelihood for each proposed frequency value. Then you Then, you will compute the posterior probability using the Bayes formula and your prior values. 
 
-What value of RS12 frequency has the highest probability? 
+What proposed value of RS12 frequency has the highest probability? 
 
 ## Question C3
 
@@ -141,7 +144,7 @@ What is the mean of your posterior distribution now?
 
 ## Question E4
 
-Does the prior have a strong impact on your point estimate? 
+Does the prior have a strong impact on your point estimate of the true frequency? 
 
 
 
