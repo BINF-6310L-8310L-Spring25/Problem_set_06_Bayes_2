@@ -71,13 +71,51 @@ Does this analysis support the hypothesis that RS12 <=50%?
 
 We would like a more precise estimate of our frequency based on the data. To do this we will construct a Monte Carlo to sample different frequency values. This will be the setup for our Monte Carlo 
 
-- Starting frequency = 10%
-- Step 1: Calculate the likelihood for the proposed theta
-- Step 2: Multiply the likelihood by the prior which will be **a beta distribution with **
-- Step 3: Compare the ratio! of the new value with the previous value, if it has a greater value you keep the proposed theta. If the new value is less than the previous value, accept it with 50% success.
-- Step 4: Propose a new theta either going up or down by a RANDOM amount determined by rnorm(1,0,sd=5)
+But first, Let's calculate the marginal likelihood of a starting value of 30 for the RS12 frequency. 
 
-_TIPS_
-- Remember the SNP frequency cannot be higher than 100% or lower than 0%
+## Question D1
+
+What is the total likelihood (**don't** use log-likelihood) across all cities for a mean frequency of 30? _Hint_ Use the ```dnorm``` function and remember we know the standard deviation is 16
+
+## Question D2
+
+What is the prior probability of a mean frequency of 30 given a prior distribution, which is a a normal distribution with a mean of 50 and a sd of 50?
+
+## Question D3
+
+What is the marginal likelihood (prior * likelihood) of a mean RS12 frequency of 30? 
+
+This is your starting value for your Markov Chain! 
+
+&nbsp;
+
+# Question Set E
+
+Now, we are going to build a Markov Chain now that you know how to compute the posterior probability for any proposed frequency value. 
+
+- Starting frequency = 30%
+- Step 1: Test if the current frequency is 100 or 0. If it is, then you should move away from 100 or 0
+- Step 2: Propose a new frequency by randomly going up or down by a RANDOM amount determined by rnorm(1,0,sd=5)
+- Step 3: Check to make sure the new proposed frequency is not >100 or < 0 (if so, then set to 100 or 0)
+- Step 4: Calculate the likelihood of the proposed frequency (using the normal distribution)
+- Step 5: Multiply the likelihood by the prior, which is **a normal distribution with a mean of 50 and a sd of 50**
+- Step 6: Compare the ratio! of the new value with the previous value, if it has a greater value you keep the proposed theta. If the new value is less than the previous value, accept it with 50% success.
+
+Run your Monte Carlo for 10 iterations
+
+## Question E1
+
+What is the mean of your posterior frequency values after running the Monte Carlo for 10 iterations?
+
+
+## Question E2
+
+Now run your Monte Carlo for 10,000 iterations. What is the mean of your posterior frequency values?
+
+
+
+
+
+
 
 
