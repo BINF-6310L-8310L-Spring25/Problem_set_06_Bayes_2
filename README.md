@@ -27,9 +27,26 @@ Possible values for the true mean of the RS12 SNP frequency could be 44%, 46%, 4
 
 You hypothesize that the true mean frequency of RS12 is <= 50%. Your null hypothesis is that the mean RS12 frequency is > 50%. You are going to test this using the Bayes Box framework for hypothesis testing. You are testing if the mean of the distribution of frequencies is <= 50%. 
 
-We will only be estimating the mean. Therefore, you can assume the true standard deviation is 16.
+We will only be estimating the mean. Therefore, you can assume the true standard deviation is 30.
 
 You are going to use a non-informative prior. This means that your alternative and null hypotheses each have a total of 0.50 (or 50%) probability. 
+
+**NORMAL LIKELIHOOD**
+
+To calculate the likelihood of an observation drawn from a normal distribution, we need to know how to calculate the likelihood! 
+
+To get the _total_ likelihood for a set of observations, you can use the function below that will give you the total likelihood of a set of observations (dat) for a given single mean value (mu) for a single standard deviation (stdd)
+
+```
+normalF <- function(dat,mu,stdd) {
+  # Log of likelihood of a normal distribution
+  # dat - input data
+  # mu - mean
+  # stdd - standard deviation 
+  sum ( -0.5* log(stdd) - 0.5*(dat - mu)^2/stdd )
+}
+
+```
 
 ## Question B1 
 
@@ -37,13 +54,13 @@ What prior values will you use for the possible frequencies of RS12?
 
 ## Question B2 
 
-Given your observations, what is the log-likelihood of observing the first city's RS12 frequency (34.28703) if the true mean of the frequencies is 50%?
+Given your observations, what is the log-likelihood of observing the first city's RS12 frequency (38.45936) if the true mean of the frequencies is 50%?
 
 &nbsp;
 
 # Question Set C
 
-You now want to calculate the posterior probability for every proposed value of RS12 frequency. You will need to create a loop that sums the log-likelihood for each frequency value across all observations. 
+We are now going to investigate 
 
 ## Question C1 
 
@@ -75,7 +92,7 @@ But first, Let's calculate the marginal likelihood of a starting value of 30 for
 
 ## Question D1
 
-What is the total likelihood (**don't** use log-likelihood) across all cities for a mean frequency of 30? _Hint_ Use the ```dnorm``` function and remember we know the standard deviation is 16
+What is the total likelihood (**don't** use log-likelihood) across all cities for a mean frequency of 30? _Hint_ Use the ```dnorm``` function and remember we know the standard deviation is 30
 
 ## Question D2
 
