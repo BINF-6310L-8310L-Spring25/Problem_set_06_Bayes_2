@@ -71,12 +71,13 @@ Does this analysis support the hypothesis that RS12 <=50%?
 
 We would like a more precise estimate of our frequency based on the data. To do this we will construct a Monte Carlo to sample different frequency values. This will be the setup for our Monte Carlo 
 
-Starting frequency = 0.5
-Step 1: Calculate the likelihood for the proposed theta
-Step 2: Multiply the likelihood by the prior which will be **a beta distribution with **
-Step 3: Compare the ratio! of the new value with the previous value, if it has a greater value you keep the proposed theta. 
-If the new value is less than the previous value, accept it with 50% success
-Step 4: Propose a new theta either going up or down by a RANDOM amount
+- Starting frequency = 10%
+- Step 1: Calculate the likelihood for the proposed theta
+- Step 2: Multiply the likelihood by the prior which will be **a beta distribution with **
+- Step 3: Compare the ratio! of the new value with the previous value, if it has a greater value you keep the proposed theta. If the new value is less than the previous value, accept it with 50% success.
+- Step 4: Propose a new theta either going up or down by a RANDOM amount determined by rnorm(1,0,sd=5)
 
+_TIPS_
+- Remember the SNP frequency cannot be higher than 100% or lower than 0%
 
 
