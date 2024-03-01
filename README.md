@@ -4,13 +4,13 @@ This week we will explore Confidence the Monte Carlo. This is primarily covered 
 
 In the lecture we covered conducting a Monte Carlo for finding the theta associated with flipping a coin. This week we will build a Monte Carlo to sample various mean values from a normal distribution. 
 
-$nbsp;
+&nbsp;
 
 # Background
 
 Genetic variants that are under balancing selection often have a frequency in the population of ~ 50%. You are attempting to find the frequency of a SNP called RS12 in the United States Population. However, you only have 90 samples from various cities across the US. This data is stored in the file. 
 
-$nbsp;
+&nbsp;
 
 # Question Set A
 
