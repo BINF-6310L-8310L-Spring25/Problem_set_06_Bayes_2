@@ -1,4 +1,4 @@
-# Problem_set_7_Bayes2
+# Problem_set_6_Bayes2
 
 This week we will explore Confidence the Monte Carlo. This is primarily covered in the second half of the lectures for this week (~slide 90)
 
