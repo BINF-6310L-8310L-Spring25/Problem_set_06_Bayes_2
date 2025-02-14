@@ -71,7 +71,7 @@ What is the _total_ likelihood of an RS12 frequency of 50% across all the observ
 
 ## Question C2
 
-Now, you will compute the posterior probability for each proposed value of RS12 frequency. To do this, you will compute the total likelihood for each proposed frequency value. Then you Then, you will compute the posterior probability using the Bayes formula and your prior values. 
+Now, you will compute the posterior probability for each proposed value of RS12 frequency. To do this, you will compute the total likelihood for each proposed frequency value. Then, you will compute the posterior probability using the Bayes formula and your prior values. 
 
 What proposed value of RS12 frequency has the highest probability? 
 
@@ -97,7 +97,7 @@ What is the total likelihood across all cities for a mean frequency of 20? You w
 
 ## Question D2
 
-We also want to set a prior probability for each frequency. Our frequency fits a beta distribution nicely since it ranges from 0-100 (or 0 to 1 if we divide by 100.) To get our prior distribution we will take the frequency and divide it by 100. Then, use the dbeta with an alpha of 2 and a beta of 2. Something like ```dbeta((proposed_lik/100),2,2)```
+We also want to set a prior probability for each frequency. Our frequency fits a beta distribution nicely since it ranges from 0-100 (or 0 to 1 if we divide by 100.) To get our prior distribution, we will take the frequency and divide it by 100. Then, use the dbeta with an alpha of 2 and a beta of 2. Something like ```dbeta((proposed_lik/100),2,2)```
 
 What is the prior value of our proposed frequency of 20?
 
