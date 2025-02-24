@@ -97,7 +97,7 @@ What is the total likelihood across all cities for a mean frequency of 20? You w
 
 ## Question D2
 
-We also want to set a prior probability for each frequency. Our frequency fits a beta distribution nicely since it ranges from 0-100 (or 0 to 1 if we divide by 100.) To get our prior distribution, we will take the frequency and divide it by 100. Then, use the dbeta with an alpha of 2 and a beta of 2. Something like ```dbeta((proposed_lik/100),2,2)```
+We also want to set a prior probability for each frequency. Our frequency fits a beta distribution nicely since it ranges from 0-100 (or 0 to 1 if we divide by 100.) To get our prior distribution, we will take the frequency and divide it by 100. Then, use the dbeta with an alpha of 2 and a beta of 2. Something like ```dbeta((proposed_theta/100),2,2)``` _note - previously this said proposed_lik - this should represent our prior belief in the theta_
 
 What is the prior value of our proposed frequency of 20?
 
